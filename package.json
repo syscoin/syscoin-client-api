@@ -1,9 +1,9 @@
 {
-  "name": "dl-nonvisual-lib-starter",
+  "name": "syscoin-client-api",
   "version": "1.0.4",
-  "description": "Welcome! This repo holds the UI code for the DL Nonvisual Lib Starter",
-  "main": "dist/index",
-  "types": "dist/index",
+  "description": "Syscoin client API",
+  "main": "dist/api",
+  "types": "dist/api",
   "scripts": {
     "build": "npm run clean-dist && cross-env NODE_ENV=production tsc -p ./tsconfig.package.json",
     "clean-dist": "rimraf dist/",
@@ -32,7 +32,12 @@
     "typescript": "^2.5.3",
     "typescript-eslint-parser": "^9.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/core-js": "^0.9.43",
+    "@types/isomorphic-fetch": "0.0.34",
+    "querystring": "^0.2.0",
+    "url": "^0.11.0"
+  },
   "peerDependencies": {
     "tslib": "^1.8.0"
   },
