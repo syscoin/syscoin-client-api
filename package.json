@@ -1,0 +1,42 @@
+{
+  "name": "dl-nonvisual-lib-starter",
+  "version": "1.0.4",
+  "description": "Welcome! This repo holds the UI code for the DL Nonvisual Lib Starter",
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "build": "npm run clean-dist && cross-env NODE_ENV=production tsc -p ./tsconfig.package.json",
+    "clean-dist": "rimraf dist/",
+    "dev": "npm run clean-dist && cross-env NODE_ENV=development tsc --watch",
+    "lint": "eslint src",
+    "postversion": "node ./publish.js && git push && git push --tags",
+    "test": "cross-env NODE_ENV=test jest",
+    "test-coverage": "npm test -- --coverage",
+    "test-watch": "npm test -- --watch",
+    "version": "npm run build && git add -A dist"
+  },
+  "repository": "git@github.com:syscoin/syscoin-client-api.git",
+  "keywords": [],
+  "author": "DecisionLens",
+  "license": "MIT",
+  "homepage": "https://github.com/syscoin/syscoin-client-api.git#readme",
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "eslint": "^4.11.0",
+    "eslint-config-uphold": "0.0.1",
+    "eslint-plugin-typescript": "^0.8.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.1",
+    "tslib": "^1.8.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.5.3",
+    "typescript-eslint-parser": "^9.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "tslib": "^1.8.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

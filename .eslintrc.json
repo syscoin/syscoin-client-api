@@ -1,0 +1,11 @@
+{
+  "extends": "uphold",
+  "parser": "typescript-eslint-parser",
+  "plugins": [
+    "typescript"
+  ],
+  "rules": {
+    "lines-between-class-members": ["error", "always"],
+    "typescript/member-ordering": ["error", { "default": ["field", "constructor", "method"] }]
+  }
+}

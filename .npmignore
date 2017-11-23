@@ -1,0 +1,18 @@
+#editor settings
+.idea
+*.iml
+
+#folders that should not be bundled
+node_modules
+reports
+src
+
+#files that should not be in the packaged bundle
+.gitignore
+.npmignore
+package.config.json
+postcss.config.js
+publish.js
+tsconfig.json
+tsconfig.package.json
+tslint.json
